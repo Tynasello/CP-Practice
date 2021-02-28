@@ -1,6 +1,6 @@
 """
 same as 0-1 knapsack problem, however we can take fractions of weights
-return max value you can carry without exceeding knapsack weight capacity
+return max value you can carry without exceeding knapsack
 """
 
 
