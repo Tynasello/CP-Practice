@@ -29,12 +29,12 @@ def solve(egg, floor):
     if floor == 1 or floor == 0:
         dp[egg][floor] = floor
         return floor
-    if floor == 1:
+    if egg == 1:
         dp[egg][floor] = floor
         return floor
 
     # check if we've already done this subproblem
-    if dp[egg][floor] != 0:
+    if dp[egg][floor] != -1:
         return dp[egg][floor]
 
     minRes = sys.maxsize
@@ -51,6 +51,7 @@ def solve(egg, floor):
 
 totalFloors = 14
 eggs = 3
-dp = [[0 for _ in range(totalFloors + 1)] for _ in range(eggs + 1)]
+dp = [[-1 for _ in range(totalFloors + 1)] for _ in range(eggs + 1)]
 
 print(solve(eggs, totalFloors))
+# print(dp)
